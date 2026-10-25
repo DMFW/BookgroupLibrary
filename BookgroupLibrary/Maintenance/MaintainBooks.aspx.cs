@@ -17,7 +17,7 @@ namespace BookgroupLibrary
 
         private Account.SimpleUserStructure _SignedOnUser;
 
-        public enum SelectionType { BBCTop100 = 1, MemberChoice = 2, Agreement = 3 };
+        public enum SelectionType { BBCTop100 = 1, MemberChoice = 2, Agreement = 3, SecretSanta = 4 };
 
         int _SelectedBookID;
         DataTable _dtBookAuthors;

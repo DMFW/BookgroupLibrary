@@ -1,30 +1,145 @@
-﻿/* DEFAULTS
-----------------------------------------------------------*/
+﻿/* Themes */
 
-body
-{
-    background: #BCDCCA;
+:root {
+    --login-background: white;
+    --body-background: #BCDCCA;
+    --page-background: white;
+    --page-border: #333300;
+    --header-background: #339933;
+    --panel-background: #465C71;
+    --text-light: #F9F9F9;
+    --text-middle: #666666;
+    --text-dark: #006600;
+    --text-error: red;
+    --text-date-main: #66CC00;
+    --text-date-santa: #CC33CC;
+    --text-date-warning: red;
+    --hide-skiplink: #C1FDC6;
+    --menu-background: #006600;
+    --menu-border: #4E667D;
+    --menu-text: white;
+    --menu-hover-background: #BFCBD6;
+    --menu-hover: #465c71;
+    --menu-active-background: #465c71;
+    --menu-active: #cfdbe6;
+    --link: #006600;
+    --hover: lime;
+    --active: #66FFCC;
+    /* Default Grid Styles */
+    --defaultgrid-forecolor: #333333;
+    --defaultgrid-header-forecolor: White;
+    --defaultgrid-header-background: #1C5E55;
+    --defaultgrid-footer-forecolor: White;
+    --defaultgrid-footer-background: #1C5E55;
+    --defaultgrid-pager-forecolor: White;
+    --defaultgrid-pager-background: #666666;
+    --defaultgrid-row-default-background: #E3EAEB;
+    --defaultgrid-row-alt-background: white;
+    --defaultgrid-row-edit-background: #7C6F57;
+    --defaultgrid-row-selected-forecolor: #333333;
+    --defaultgrid-row-selected-background: #C5BBAF;
+    --defaultgrid-sortedascending-cell-background: #F8FAFA;
+    --defaultgrid-sortedascending-header-background: #246B61;
+    --defaultgrid-sorteddescending-cell-background: #D4DFE1;
+    --defaultgrid-sorteddescending-header-background: #15524A;
+    /* Book Grid Styles */
+    --bookgrid-forecolor: #333333;
+    --bookgrid-header-forecolor: White;
+    --bookgrid-header-background: #1C5E55;
+    --bookgrid-footer-forecolor: White;
+    --bookgrid-footer-background: #7C6F57;
+    --bookgrid-pager-forecolor: White;
+    --bookgrid-pager-background: #666666;
+    --bookgrid-row-default-background: #E3EAEB;
+    --bookgrid-row-alt-background: white;
+    --bookgrid-row-edit-background: #7C6F57;
+    --bookgrid-row-selected-forecolor: #333333;
+    --bookgrid-row-selected-background: #C5BBAF;
+    --bookgrid-sortedascending-cell-background: #F8FAFA;
+    --bookgrid-sortedascending-header-background: #246B61;
+    --bookgrid-sorteddescending-cell-background: #D4DFE1;
+    --bookgrid-sorteddescending-header-background: #15524A;
+    /* Marking Grid Styles */
+    --markinggrid-forecolor: #333333;
+    --markinggrid-bordercolor: White;
+    --markinggrid-header-forecolor: #E7E7FF;
+    --markinggrid-header-background: #4A3C8C;
+    --markinggrid-footer-forecolor: Black;
+    --markinggrid-footer-background: #C6C3C6;
+    --markinggrid-pager-forecolor: Black;
+    --markinggrid-pager-background: #C6C3C6;
+    --markinggrid-row-default-forecolor: Black;
+    --markinggrid-row-default-background: #DEDFDE;
+    --markinggrid-row-alt-forecolor: Black;
+    --markinggrid-row-alt-background: #DEDFDE;
+    --markinggrid-row-edit-background: #7C6F57;
+    --markinggrid-row-selected-forecolor: White;
+    --markinggrid-row-selected-background: #9471DE;
+    --markinggrid-row-total-forecolor: black;
+    --markinggrid-row-total-background: cadetblue;
+    --markinggrid-sortedascending-cell-background: #F1F1F1;
+    --markinggrid-sortedascending-header-background: #594B9C;
+    --markinggrid-sorteddescending-cell-background: #CAC9C9;
+    --markinggrid-sorteddescending-header-background: #33276A;
+}
+
+.themeViolet {
+    --login-background: white;
+    --body-background: #BCDCCA;
+    --page-background: #d9b3ff;
+    --page-border: #333300;
+    --header-background: #4B004B;
+    --panel-background: #EEE6EE;
+    --text-light: white;
+    --text-middle: #666666;
+    --text-dark: black;
+    --text-error: red;
+    --text-date-main: #66CC00;
+    --text-date-santa: #CC33CC;
+    --text-date-warning: red;
+    --hide-skiplink: #C1FDC6;
+    --menu-background: #CFBDE6;
+    --menu-border: #4E667D;
+    --menu-text: white;
+    --menu-hover-background: #BFCBD6;
+    --menu-hover: #465c71;
+    --menu-active-background: #465c71;
+    --menu-active: #cfdbe6;
+    --link: #9999FF;
+    --hover: #00FF00;
+    --active: #66FFCC;
+    --bookgridForecolor: #333333;
+    --bookgridHeader: green;
+    --bookgridRow: gray;
+    --bookgridAlt: white;
+    --gridtotalrow: teal;
+    --selectedrowstyle: silver;
+}
+
+/* DEFAULTS
+----------------------------------------------------------*/
+body {
+    background: var(--body-background);
     font-size: .80em;
     font-family: Corbel;
     margin: 0px;
     padding: 0px;
-    color: #006600;
+    color: var(--text-dark);
 }
 
-a:link, a:visited
-{
-    color: #006600;
+a:link, a:visited {
+    color: var(--link);
 }
 
 a:hover
 {
-    color: #00FF00;
+    color: var(--hover);
     text-decoration: none;
 }
 
-a:active
+a:active 
 {
-    color: #66FFCC;
+    color: var(--active);
 }
 
 p
@@ -40,7 +155,7 @@ p
 h1, h2, h3, h4, h5, h6
 {
     font-size: 1.5em;
-    color: #666666;
+    color: var(--text-middle);
     font-variant: small-caps;
     text-transform: none;
     font-weight: 200;
@@ -86,20 +201,18 @@ first child of the left and right table columns */
 /* PRIMARY LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
 
-.page
-{
+.page {
     width: 960px;
-    background-color: #fff;
+    background-color: var(--page-background);
     margin: 20px auto 0px auto;
-    border: 1px solid #333300;
+    border: 1px solid var(--page-border);
 }
 
-.header
-{
+.header {
     position: relative;
     margin: 0px;
     padding: 0px;
-    background: #339933;
+    background: var(--header-background);
     width: 100%;
 }
 
@@ -108,7 +221,7 @@ first child of the left and right table columns */
     font-weight: 700;
     margin: 0px;
     padding: 0px 0px 0px 20px;
-    color: #f9f9f9;
+    color: var(--text-light);
     border: none;
     line-height: 2em;
     font-size: 2em;
@@ -129,9 +242,8 @@ first child of the left and right table columns */
     min-height: 200px;
 }
 
-.footer
-{
-    color: #4e5766;
+.footer {
+    color: var(--text-dark);
     padding: 8px 0px 0px 0px;
     margin: 0px auto;
     text-align: center;
@@ -139,22 +251,22 @@ first child of the left and right table columns */
 }
 
 .errortext {
-color: #FF0000;
+color: var(--text-error);
 }
 
 .datemaintext {
-font-weight: bold;
-color: #66CC00;
+    font-weight: bold;
+    color: var(--text-date-main);
 }
 
 .datesantatext {
-font-weight: bold;
-color: #CC33CC;
+    font-weight: bold;
+    color: var(--text-date-santa);
 }
 
 .datewarningtext {
-font-weight: bold;
-color: #FF0000;
+    font-weight: bold;
+    color: var(--text-date-warning);
 }
 
 
@@ -163,12 +275,11 @@ color: #FF0000;
 
 div.hideSkiplink
 {
-    background-color: #C1FDC6;
+    background-color: var(--hide-skiplink);
     width: 100%;
 }
 
-div.menu
-{
+div.menu {
     padding: 4px 0px 4px 8px;
 }
 
@@ -180,11 +291,10 @@ div.menu ul
     width: auto;
 }
 
-div.menu ul li a, div.menu ul li a:visited
-{
-    background-color: #006600;
-    border: 1px #4e667d solid;
-    color: #FFFFFF;
+div.menu ul li a, div.menu ul li a:visited {
+    background-color: var(--menu-background);
+    border: 1px var(--menu-border) solid;
+    color: var(--menu-text);
     display: block;
     line-height: 1.35em;
     padding: 4px 20px;
@@ -194,15 +304,14 @@ div.menu ul li a, div.menu ul li a:visited
 
 div.menu ul li a:hover
 {
-    background-color: #bfcbd6;
-    color: #465c71;
+    background-color: var(--menu-hover-background);
+    color: var(--menu-hover);
     text-decoration: none;
 }
 
-div.menu ul li a:active
-{
-    background-color: #465c71;
-    color: #cfdbe6;
+div.menu ul li a:active {
+    background-color: var(--menu-active-background);
+    color: var(--menu-active);
     text-decoration: none;
 }
 
@@ -271,34 +380,33 @@ div.accountInfo
     width: auto;
 }
 
-.loginDisplay
-{
+.loginDisplay {
     font-size: 1.1em;
     display: block;
     text-align: right;
     padding: 10px;
-    color: White;
+    color: var(--login-background);
 }
 
 .loginDisplay a:link
 {
-    color: white;
+    color: var(--text-light);
 }
 
 .loginDisplay a:visited
 {
-    color: white;
+    color: var(--text-light);
 }
 
 .loginDisplay a:hover
 {
-    color: white;
+    color: var(--text-light);
 }
 
 .failureNotification
 {
     font-size: 1.2em;
-    color: Red;
+    color: var(--text-error);
 }
 
 .bold
@@ -312,16 +420,216 @@ div.accountInfo
     padding-right: 10px;
 }
 
-.SelectedRowStyle
-{
-    background-color: silver;
+.preserve-lines {
+    white-space: pre-wrap;
 }
 
 /* Grid Styles  
 ----------------------------------------------------------*/
 
-.gridTotalRow
-{
-    background-color:Teal;
+/* Default Grid Styles */
+
+.defaultgrid {
+    color: var(--defaultgrid-forecolor);
 }
 
+.defaultgridHeaderStyle {
+    color: var(--defaultgrid-header-forecolor);
+    font-weight: bold;
+    background-color: var(--defaultgrid-header-background);
+}
+
+    .defaultgridHeaderStyle a {
+        color: var(--defaultgrid-header-forecolor);
+        font-weight: bold;
+    }
+
+.defaultgridFooterStyle {
+    color: var(--defaultgrid-footer-forecolor);
+    background-color: var(--defaultgrid-footer-background);
+    font-weight: bold;
+}
+
+.defaultgridPagerStyle {
+    color: var(--defaultgrid-pager-forecolor);
+    background-color: var(--defaultgrid-pager-background);
+}
+    .defaultgridPagerStyle a {
+        color: var(--defaultgrid-pager-forecolor);
+        background-color: var(--defaultgrid-pager-background);
+    }
+
+.defaultgridRowStyle {
+    background-color: var(--defaultgrid-row-default-background);
+}
+
+.defaultgridRowAltStyle {
+    background-color: var(--defaultgrid-row-alt-background);
+}
+
+.defaultgridRowEditStyle {
+    background-color: var(--defaultgrid-row-edit-background);
+}
+
+.defaultgridRowSelectedStyle {
+    color: var(--defaultgrid-row-selected-forecolor);
+    background-color: var(--defaultgrid-row-selected-background);
+    font-weight: bold;
+}
+
+.defaultgridSortedAscendingCellStyle {
+    background-color: var(--defaultgrid-sortedascending-cell-background);
+}
+
+.defaultgridSortedAscendingHeadertStyle {
+    background-color: var(--defaultgrid-sortedascending-header-background);
+}
+
+.defaultgridSortedDescendingCellStyle {
+    background-color: var(--defaultgrid-sorteddescending-cell-background);
+}
+
+.defaultgridSortedDescendingHeaderStyle {
+    background-color: var(--defaultgrid-sorteddescending-header-background);
+}
+
+/* Book Grid Styles */
+
+.bookGrid {
+    color: var(--bookgrid-forecolor);
+}
+
+.bookGridHeaderStyle {
+    color: var(--bookgrid-header-forecolor);
+    font-weight: bold;
+    background-color: var(--bookgrid-header-background);
+}
+    .bookGridHeaderStyle a {
+        color: var(--bookgrid-header-forecolor);
+        font-weight: bold;
+    }
+
+.bookGridFooterStyle {
+    color: var(--bookgrid-footer-forecolor);
+    background-color: var(--bookgrid-footer-background);
+    font-weight: bold;
+}
+
+.bookGridPagerStyle {
+    color: var(--bookgrid-pager-forecolor);
+    background-color: var(--bookgrid-pager-background);
+}
+.bookGridPagerStyle a {
+    color: var(--bookgrid-pager-forecolor);
+    background-color: var(--bookgrid-pager-background);
+}
+
+.bookGridRowStyle {
+    background-color: var(--bookgrid-row-default-background);
+}
+
+.bookGridRowAltStyle {
+    background-color: var(--bookgrid-row-alt-background);
+}
+
+.bookGridRowEditStyle {
+    background-color: var(--bookgrid-row-edit-background);
+}
+
+.bookGridRowSelectedStyle {
+    color: var(--bookgrid-row-selected-forecolor);
+    background-color: var(--bookgrid-row-selected-background);
+    font-weight: bold;
+}
+
+.bookGridSortedAscendingCellStyle {
+    background-color: var(--bookgrid-sortedascending-cell-background);
+}
+
+.bookGridSortedAscendingHeaderStyle {
+    background-color: var(--bookgrid-sortedascending-header-background);
+}
+
+.bookGridSortedDescendingCellStyle {
+    background-color: var(--bookgrid-sorteddescending-cell-background);
+}
+
+.bookGridSortedDescendingHeaderStyle {
+    background-color: var(--bookgrid-sorteddescending-header-background);
+}
+
+/* Marking Grid Styles */
+
+.markingGrid {
+    color: var(--markinggrid-forecolor);
+    border-color: var(--markinggrid-bordercolor);
+}
+
+.markingGridHeaderStyle {
+    color: var(--markinggrid-header-forecolor);
+    font-weight: bold;
+    background-color: var(--markinggrid-header-background);
+}
+.markingGridHeaderStyle a {
+    color: var(--markinggrid-header-forecolor);
+    font-weight: bold;
+}
+
+.markingGridFooterStyle {
+    color: var(--markinggrid-footer-forecolor);
+    background-color: var(--markinggrid-footer-background);
+    font-weight: bold;
+}
+
+.markingGridPagerStyle {
+    color: var(--markinggrid-pager-forecolor);
+    background-color: var(--markinggrid-pager-background);
+}
+
+.markingGridPagerStyle a {
+    color: var(--markinggrid-pager-forecolor);
+    background-color: var(--markinggrid-pager-background);
+}
+
+.markingGridRowStyle 
+{
+    color: var(--markinggrid-row-default-forecolor);
+    background-color: var(--markinggrid-row-default-background);
+}
+
+.markingGridRowAltStyle 
+{
+    color: var(--markinggrid-row-alt-forecolor);
+    background-color: var(--markinggrid-row-alt-background);
+}
+
+.markingGridEditRowStyle {
+    background-color: var(--markinggrid-row-edit-background);
+}
+
+.markingGridRowSelectedStyle {
+    color: var(--markinggrid-row-selected-forecolor);
+    background-color: var(--markinggrid-row-selected-background);
+    font-weight: bold;
+}
+
+.markingGridRowTotalStyle {
+    color: var(--markinggrid-row-total-forecolor);
+    background-color: var(--markinggrid-row-total-background);
+}
+
+.markingGridSortedAscendingCellStyle {
+    background-color: var(--markinggrid-sortedascending-cell-background);
+}
+
+.markingGridSortedAscendingHeaderStyle {
+    background-color: var(--markinggrid-sortedascending-header-background);
+}
+
+.markingGridSortedDescendingCellStyle {
+    background-color: var(--markinggrid-sorteddescending-cell-background);
+}
+
+.markingGridSortedDescendingHeaderStyle {
+    background-color: var(--markinggrid-sorteddescending-header-background);
+}

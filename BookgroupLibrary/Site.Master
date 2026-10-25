@@ -35,10 +35,13 @@
                     <Items>
                         <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
 												<asp:MenuItem NavigateUrl="~/Diary.aspx" Text="Diary"/>
+                        <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/BBCTopList.aspx" Text="BBC Big Read" 
                             Value="BBC Big Read"/>
                         <asp:MenuItem NavigateUrl="~/OurChoicesList.aspx" Text="Our Choices" Value="Our Choices"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/MarkingStats.aspx?SelectedPerson=0" Text="Marking Stats" Value="MarkingStats"></asp:MenuItem>
+                        <asp:MenuItem Text="Summary Stats" Value="Summary Stats"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Links.aspx " Text="Links" Value="Links"></asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/Maintenance.aspx" Text="Maintenance" 
                             Value="Maintenance"></asp:MenuItem>
                     </Items>

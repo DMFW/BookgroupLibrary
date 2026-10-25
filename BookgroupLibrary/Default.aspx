@@ -31,25 +31,25 @@
 				with a three month horizon. These are the categories we use to score books we have read:-</p>
     <asp:GridView 
         ID="grdCategories" runat="server" DataSourceID="SqlDataSourceMarkingCategory" 
-        AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" 
-        GridLines="None">
-        <AlternatingRowStyle BackColor="White" />
+        AutoGenerateColumns="False" CellPadding="4" 
+        GridLines="None" CssClass="defaultgrid">
+        <HeaderStyle CssClass="defaultgridHeaderStyle" />
+        <FooterStyle CssClass="defaultgridFooterStyle" />
+        <PagerStyle HorizontalAlign="Center" CssClass="defaultgridPagerStyle" />
+        <RowStyle CssClass="defaultgridRowStyle" />
+        <AlternatingRowStyle CssClass="defaultgridRowAltStyle"/>
+        <EditRowStyle CssClass="defaultgridEditRowStyle" />
+        <SelectedRowStyle CssClass="defaultgridSelectedRowStyle" />
+        <SortedAscendingCellStyle CssClass="defaultgridSortedAscendingCellStyle" />
+        <SortedAscendingHeaderStyle CssClass="defaultgridSortedAscendingHeaderStyle" />
+        <SortedDescendingCellStyle CssClass="defaultgridSortedDescendingCellStyle" />
+        <SortedDescendingHeaderStyle CssClass="defaultgridSortedDescendingHeaderStyle" />
         <Columns>
             <asp:BoundField DataField="CategoryDescription" HeaderText="Scoring Category" 
                 SortExpression="CategoryDescription" />
             <asp:BoundField DataField="CategoryNotes" HeaderText="Notes" 
                 SortExpression="CategoryNotes" />
         </Columns>
-        <EditRowStyle BackColor="#7C6F57" />
-        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#E3EAEB" />
-        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F8FAFA" />
-        <SortedAscendingHeaderStyle BackColor="#246B61" />
-        <SortedDescendingCellStyle BackColor="#D4DFE1" />
-        <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
     <p>
         Although we have had a number of people leave and join us over the years the policy of the group has

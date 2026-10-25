@@ -153,7 +153,7 @@
 	<asp:Label ID="lblScoreMaintenanceInformation" runat="server" Text="Group member scores can be entered for a book once it has been added by selecting it for editing." />
 	<asp:Panel ID="pnlBookScores" runat="server">
 	<asp:GridView ID="grdBookMarks" runat="server" DataSourceID="objBookMarks" ShowFooter="True" 
-      BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" 
+      BackColor="White" BorderStyle="Ridge" BorderWidth="2px" 
 			CellPadding="3" CellSpacing="1" GridLines="None"
       ondatabound="grdBookMarks_DataBound"
 			onrowdatabound="grdBookMarks_RowDataBound"
@@ -161,28 +161,39 @@
 			onrowupdated="grdBookMarks_RowUpdated"
 			onrowdeleting="grdBookMarks_RowDeleting"
 			onrowdeleted="grdBookMarks_RowDeleted"
-			AutoGenerateColumns="False">
+			AutoGenerateColumns="False" CssClass="markingGrid">
+		<HeaderStyle CssClass="markingGridHeaderStyle" />
+        <FooterStyle CssClass="markingGridFooterStyle" />
+        <PagerStyle HorizontalAlign="Right" CssClass="markingGridPagerStyle" />
+        <RowStyle CssClass="markingGridRowStyle" />
+        <AlternatingRowStyle CssClass="markingGridRowAltStyle"/>
+        <EditRowStyle CssClass="markingGridRowEditStyle" />
+        <SelectedRowStyle CssClass="markingGridRowSelectedStyle" />
+        <SortedAscendingCellStyle CssClass="markingGridSortedAscendingCellStyle" />
+        <SortedAscendingHeaderStyle CssClass="markingGridSortedAscendingHeaderStyle" />
+        <SortedDescendingCellStyle CssClass="markingGridSortedDescendingCellStyle" />
+        <SortedDescendingHeaderStyle CssClass="markingGridSortedDescendingHeaderStyle" />
 			<EmptyDataTemplate>
 				<asp:Button ID="btnAddFirstScorer" runat="server" Text="Add Scorer" onclick="btnAddScorer_Click" />
 				<asp:DropDownList ID="ddlFirstScorer" runat="server" OnLoad="ddlScorer_Load"
 						DataSourceID="SqlAllGroupMembers" DataTextField="DisplayName" DataValueField="GroupMemberID" AppendDataBoundItems="true" OnDataBound="ddlListRequiringUnselectedItem_DataBound">
 				</asp:DropDownList>
-      </EmptyDataTemplate>
+			</EmptyDataTemplate>
 			<Columns>
 				<asp:TemplateField ShowHeader="False">
 					<ItemTemplate>
 						<asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="False" CommandName="Edit" Text="Edit"></asp:LinkButton>  
-						<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>                        
-          </ItemTemplate>
-          <EditItemTemplate>
-              <asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
-              &nbsp;
-							<asp:LinkButton ID="lnkButtonCancel" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
-          </EditItemTemplate>
+						<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
+					</ItemTemplate>
+					<EditItemTemplate>
+						<asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="True" CommandName="Update" Text="Update"></asp:LinkButton>
+						&nbsp;
+						<asp:LinkButton ID="lnkButtonCancel" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel"></asp:LinkButton>
+					</EditItemTemplate>
 					<FooterTemplate>
 						<asp:Button ID="btnAddScorer" runat="server" Text="Add Scorer" onclick="btnAddScorer_Click"/>
 					</FooterTemplate>
-        </asp:TemplateField>
+				</asp:TemplateField>
 				<asp:TemplateField ShowHeader="True" HeaderText="GroupMember">
 					<ItemTemplate>
               <asp:Label ID="lblGroupMember" runat="server" Text='<%# Eval("GroupMember") %>'></asp:Label>
@@ -266,16 +277,7 @@
             <asp:Label ID="lblGroupMemberID" runat="server" Text='<%# Eval("GroupMemberID") %>'></asp:Label>
           </ItemTemplate>
 				</asp:TemplateField>
-			</Columns>
-      <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-      <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-      <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-      <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-      <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-      <SortedAscendingCellStyle BackColor="#F1F1F1" />
-      <SortedAscendingHeaderStyle BackColor="#594B9C" />
-      <SortedDescendingCellStyle BackColor="#CAC9C9" />
-      <SortedDescendingHeaderStyle BackColor="#33276A" />
+		</Columns>
   </asp:GridView>
   <asp:ObjectDataSource ID="objBookMarks" runat="server" 
       OldValuesParameterFormatString="original_{0}" 

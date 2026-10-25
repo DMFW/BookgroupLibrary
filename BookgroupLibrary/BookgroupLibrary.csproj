@@ -75,11 +75,15 @@
     <Content Include="Images\Authors.gif" />
     <Content Include="Images\Books.gif" />
     <Content Include="Images\Group.gif" />
+    <Content Include="Links.aspx" />
     <Content Include="Maintenance\MaintainBooks.aspx" />
     <Content Include="Maintenance\MaintainGroup.aspx" />
     <Content Include="Maintenance\MaintainAuthors.aspx" />
+    <Content Include="News.aspx" />
     <Content Include="OurChoicesList.aspx" />
-    <Content Include="Styles\Site.css" />
+    <Content Include="Styles\Site.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -145,6 +149,20 @@
     </Compile>
     <Compile Include="Diary.aspx.designer.cs">
       <DependentUpon>Diary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Links.aspx.cs">
+      <DependentUpon>Links.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Links.aspx.designer.cs">
+      <DependentUpon>Links.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global\BookLock.cs" />
     <Compile Include="Global\AppState.cs" />

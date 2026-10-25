@@ -5,10 +5,20 @@
     <asp:GridView ID="grdOurList" runat="server" AllowPaging="True" 
         AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
         DataSourceID="SqlDataSourceOurList" 
-        EmptyDataText="There are no data records to display." ForeColor="#333333" 
+        EmptyDataText="There are no data records to display." 
         GridLines="None" onselectedindexchanged="grdOurList_SelectedIndexChanged" 
-        PageSize="50" DataKeyNames="BookID">
-        <AlternatingRowStyle BackColor="White" />
+        PageSize="50" DataKeyNames="BookID" CssClass="bookGrid">
+        <HeaderStyle CssClass="bookGridHeaderStyle" />
+        <FooterStyle CssClass="bookGridFooterStyle" />
+        <PagerStyle HorizontalAlign="Center" CssClass="bookGridPagerStyle" />
+        <RowStyle CssClass="bookGridRowStyle" />
+        <AlternatingRowStyle CssClass="bookGridRowAltStyle"/>
+        <EditRowStyle CssClass="bookGridRowEditStyle" />
+        <SelectedRowStyle CssClass="bookGridRowSelectedStyle" />
+        <SortedAscendingCellStyle CssClass="bookGridSortedAscendingCellStyle" />
+        <SortedAscendingHeaderStyle CssClass="bookGridSortedAscendingHeaderStyle" />
+        <SortedDescendingCellStyle CssClass="bookGridSortedDescendingCellStyle" />
+        <SortedDescendingHeaderStyle CssClass="bookGridSortedDescendingHeaderStyle" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" ButtonType="Button" />
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
@@ -21,16 +31,6 @@
             <asp:BoundField DataField="ChosenBy" HeaderText="Chosen By" 
                 SortExpression="ChosenBy" />
         </Columns>
-        <EditRowStyle BackColor="#7C6F57" />
-        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#E3EAEB" />
-        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F8FAFA" />
-        <SortedAscendingHeaderStyle BackColor="#246B61" />
-        <SortedDescendingCellStyle BackColor="#D4DFE1" />
-        <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSourceOurList" runat="server" 
         ConnectionString="<%$ ConnectionStrings:SouthendBookgroupConnectionString %>" 
