@@ -4,59 +4,61 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
     <title></title>
-    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeClassic.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemePurple.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body>
+<body data-theme="purple">
     <form runat="server">
-    <div class="page">
-        <div class="header">
-            <div class="title">
-                <h1>
-                    Southend-On-Sea Big Readers Bookgroup
-                </h1>
+        <div class="page">
+            <div class="header">
+                <div class="title">
+                    <h1>Southend-On-Sea Big Readers Bookgroup
+                    </h1>
+                </div>
+                <div class="loginDisplay">
+                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a> ]
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Welcome <span class="bold">
+                                <asp:Label ID="lblHeadLoginName" runat="server" /></span>!
+                        [
+                            <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Default.aspx?Logout=True" />
+                            ]
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+                <div class="clear hideSkiplink">
+                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                        EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal"
+                        OnMenuItemClick="NavigationMenu_MenuItemClick">
+                        <Items>
+                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                            <asp:MenuItem NavigateUrl="~/Diary.aspx" Text="Diary" />
+                            <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/BBCTopList.aspx" Text="BBC Big Read" Value="BBC Big Read"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/OurChoicesList.aspx" Text="Our Choices" Value="Our Choices"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/SecretSantas.aspx" Text="Santa's Choices" Value="Santas"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MarkingStats.aspx?SelectedPerson=0" Text="Marking Stats" Value="MarkingStats"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Statistics.aspx" Text="Library Stats" Value="Library Stats"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Links.aspx " Text="Links" Value="Links"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Maintenance.aspx" Text="Maintenance" Value="Maintenance"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </div>
             </div>
-            <div class="loginDisplay">
-                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:Label ID="lblHeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Default.aspx?Logout=True"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
             </div>
-            <div class="clear hideSkiplink">
-                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
-                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal"
-										onmenuitemclick="NavigationMenu_MenuItemClick">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-												<asp:MenuItem NavigateUrl="~/Diary.aspx" Text="Diary"/>
-                        <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/BBCTopList.aspx" Text="BBC Big Read" 
-                            Value="BBC Big Read"/>
-                        <asp:MenuItem NavigateUrl="~/OurChoicesList.aspx" Text="Our Choices" Value="Our Choices"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/MarkingStats.aspx?SelectedPerson=0" Text="Marking Stats" Value="MarkingStats"></asp:MenuItem>
-                        <asp:MenuItem Text="Summary Stats" Value="Summary Stats"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Links.aspx " Text="Links" Value="Links"></asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Maintenance.aspx" Text="Maintenance" 
-                            Value="Maintenance"></asp:MenuItem>
-                    </Items>
-                </asp:Menu>
+            <div class="clear">
             </div>
         </div>
-        <div class="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        <div class="footer">
         </div>
-        <div class="clear">
-        </div>
-    </div>
-    <div class="footer">
-        
-    </div>
     </form>
 </body>
 </html>

@@ -5,24 +5,24 @@
     <asp:Label ID="lblAuthors" runat="server" Text="Author(s)"></asp:Label>
     <asp:GridView ID="grdBookAuthors" runat="server" AutoGenerateColumns="False" 
         DataKeyNames="AuthorID" DataSourceID="SqlDataSourceBookAuthors" 
-        CellPadding="4" ForeColor="#333333" GridLines="None">
-        <AlternatingRowStyle BackColor="White" />
+        CellPadding="4" GridLines="None" CssClass="defaultgrid">
+         <HeaderStyle CssClass="defaultgridHeaderStyle" />
+        <FooterStyle CssClass="defaultgridFooterStyle" />
+        <PagerStyle HorizontalAlign="Center" CssClass="defaultgridPagerStyle" />
+        <RowStyle CssClass="defaultgridRowStyle" />
+        <AlternatingRowStyle CssClass="defaultgridRowAltStyle"/>
+        <EditRowStyle CssClass="defaultgridEditRowStyle" />
+        <SelectedRowStyle CssClass="defaultgridSelectedRowStyle" />
+        <SortedAscendingCellStyle CssClass="defaultgridSortedAscendingCellStyle" />
+        <SortedAscendingHeaderStyle CssClass="defaultgridSortedAscendingHeaderStyle" />
+        <SortedDescendingCellStyle CssClass="defaultgridSortedDescendingCellStyle" />
+        <SortedDescendingHeaderStyle CssClass="defaultgridSortedDescendingHeaderStyle" />
         <Columns>
             <asp:BoundField DataField="FirstName" HeaderText="Forename" 
                 SortExpression="FirstName" />
             <asp:BoundField DataField="LastName" HeaderText="Surname" 
                 SortExpression="LastName" />
         </Columns>
-        <EditRowStyle BackColor="#7C6F57" />
-        <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#666666" ForeColor="White" HorizontalAlign="Center" />
-        <RowStyle BackColor="#E3EAEB" />
-        <SelectedRowStyle BackColor="#C5BBAF" Font-Bold="True" ForeColor="#333333" />
-        <SortedAscendingCellStyle BackColor="#F8FAFA" />
-        <SortedAscendingHeaderStyle BackColor="#246B61" />
-        <SortedDescendingCellStyle BackColor="#D4DFE1" />
-        <SortedDescendingHeaderStyle BackColor="#15524A" />
     </asp:GridView>
     <asp:SqlDataSource ID="SqlDataSourceBookAuthors" runat="server" 
         ConnectionString="<%$ ConnectionStrings:SouthendBookgroupConnectionString %>" 
@@ -69,21 +69,23 @@
     </asp:SqlDataSource>
     <hr />
     <asp:GridView ID="grdBookMarks" runat="server" DataSourceID="objBookMarks" AutoGenerateColumns="True" AllowSorting="True"
-        BackColor="White" BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" 
+        BorderColor="White" BorderStyle="Ridge" BorderWidth="2px" 
         CellPadding="3" CellSpacing="1" GridLines="None"
         onrowdatabound="grdBookMarks_RowDataBound"
         ondatabound="grdBookMarks_DataBound"
         onsorting="grdBookMarks_Sorting" 
-        onselectedindexchanged="grdBookMarks_SelectedIndexChanged">
-        <FooterStyle BackColor="#C6C3C6" ForeColor="Black" />
-        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#E7E7FF" />
-        <PagerStyle BackColor="#C6C3C6" ForeColor="Black" HorizontalAlign="Right" />
-        <RowStyle BackColor="#DEDFDE" ForeColor="Black" />
-        <SelectedRowStyle BackColor="#9471DE" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#F1F1F1" />
-        <SortedAscendingHeaderStyle BackColor="#594B9C" />
-        <SortedDescendingCellStyle BackColor="#CAC9C9" />
-        <SortedDescendingHeaderStyle BackColor="#33276A" />
+        onselectedindexchanged="grdBookMarks_SelectedIndexChanged" CssClass="markingGrid">
+        <HeaderStyle CssClass="markingGridHeaderStyle" />
+        <FooterStyle CssClass="markingGridFooterStyle" />
+        <PagerStyle HorizontalAlign="Right" CssClass="markingGridPagerStyle" />
+        <RowStyle CssClass="markingGridRowStyle" />
+        <AlternatingRowStyle CssClass="markingGridRowAltStyle"/>
+        <EditRowStyle CssClass="markingGridRowEditStyle" />
+        <SelectedRowStyle CssClass="markingGridRowSelectedStyle" />
+        <SortedAscendingCellStyle CssClass="markingGridSortedAscendingCellStyle" />
+        <SortedAscendingHeaderStyle CssClass="markingGridSortedAscendingHeaderStyle" />
+        <SortedDescendingCellStyle CssClass="markingGridSortedDescendingCellStyle" />
+        <SortedDescendingHeaderStyle CssClass="markingGridSortedDescendingHeaderStyle" />
     </asp:GridView>
     <asp:ObjectDataSource ID="objBookMarks" runat="server" 
         OldValuesParameterFormatString="original_{0}" 
@@ -92,6 +94,6 @@
         onobjectcreating="objBookMarks_ObjectCreating">
     </asp:ObjectDataSource>
     <asp:Button ID="btnEdit" runat="server" onclick="btnEdit_Click" Text="Edit" />
-		<asp:ValidationSummary ID="vsmEditState" ValidationGroup="EditState" ForeColor="Red" runat="server" />
+		<asp:ValidationSummary ID="vsmEditState" ValidationGroup="EditState" CssClass="validationSummaryStyle" runat="server" />
     <hr />
 </asp:Content>

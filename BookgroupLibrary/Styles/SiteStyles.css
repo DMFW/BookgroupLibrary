@@ -1,208 +1,8 @@
-﻿/* Themes */
-
-:root {
-    --login-background: white;
-    --body-background: #BCDCCA;
-    --page-background: white;
-    --page-border: #333300;
-    --header-background: #339933;
-    --panel-background: #465C71;
-    --text-light: #F9F9F9;
-    --text-middle: #666666;
-    --text-dark: #006600;
-    --text-error: red;
-    --text-date-main: #66CC00;
-    --text-date-santa: #CC33CC;
-    --text-date-warning: red;
-    --hide-skiplink: #C1FDC6;
-    --menu-background: #006600;
-    --menu-border: #4E667D;
-    --menu-text: white;
-    --menu-hover-background: #BFCBD6;
-    --menu-hover: #465c71;
-    --menu-active-background: #465c71;
-    --menu-active: #cfdbe6;
-    --link: #006600;
-    --hover: lime;
-    --active: #66FFCC;
-    /* Default Grid Styles */
-    --defaultgrid-forecolor: #333333;
-    --defaultgrid-header-forecolor: White;
-    --defaultgrid-header-background: #1C5E55;
-    --defaultgrid-footer-forecolor: White;
-    --defaultgrid-footer-background: #1C5E55;
-    --defaultgrid-pager-forecolor: White;
-    --defaultgrid-pager-background: #666666;
-    --defaultgrid-row-default-background: #E3EAEB;
-    --defaultgrid-row-alt-background: white;
-    --defaultgrid-row-edit-background: #7C6F57;
-    --defaultgrid-row-selected-forecolor: #333333;
-    --defaultgrid-row-selected-background: #C5BBAF;
-    --defaultgrid-sortedascending-cell-background: #F8FAFA;
-    --defaultgrid-sortedascending-header-background: #246B61;
-    --defaultgrid-sorteddescending-cell-background: #D4DFE1;
-    --defaultgrid-sorteddescending-header-background: #15524A;
-    /* Book Grid Styles */
-    --bookgrid-forecolor: #333333;
-    --bookgrid-header-forecolor: White;
-    --bookgrid-header-background: #1C5E55;
-    --bookgrid-footer-forecolor: White;
-    --bookgrid-footer-background: #7C6F57;
-    --bookgrid-pager-forecolor: White;
-    --bookgrid-pager-background: #666666;
-    --bookgrid-row-default-background: #E3EAEB;
-    --bookgrid-row-alt-background: white;
-    --bookgrid-row-edit-background: #7C6F57;
-    --bookgrid-row-selected-forecolor: #333333;
-    --bookgrid-row-selected-background: #C5BBAF;
-    --bookgrid-sortedascending-cell-background: #F8FAFA;
-    --bookgrid-sortedascending-header-background: #246B61;
-    --bookgrid-sorteddescending-cell-background: #D4DFE1;
-    --bookgrid-sorteddescending-header-background: #15524A;
-    /* Marking Grid Styles */
-    --markinggrid-forecolor: #333333;
-    --markinggrid-bordercolor: White;
-    --markinggrid-header-forecolor: #E7E7FF;
-    --markinggrid-header-background: #4A3C8C;
-    --markinggrid-footer-forecolor: Black;
-    --markinggrid-footer-background: #C6C3C6;
-    --markinggrid-pager-forecolor: Black;
-    --markinggrid-pager-background: #C6C3C6;
-    --markinggrid-row-default-forecolor: Black;
-    --markinggrid-row-default-background: #DEDFDE;
-    --markinggrid-row-alt-forecolor: Black;
-    --markinggrid-row-alt-background: #DEDFDE;
-    --markinggrid-row-edit-background: #7C6F57;
-    --markinggrid-row-selected-forecolor: White;
-    --markinggrid-row-selected-background: #9471DE;
-    --markinggrid-row-total-forecolor: black;
-    --markinggrid-row-total-background: cadetblue;
-    --markinggrid-sortedascending-cell-background: #F1F1F1;
-    --markinggrid-sortedascending-header-background: #594B9C;
-    --markinggrid-sorteddescending-cell-background: #CAC9C9;
-    --markinggrid-sorteddescending-header-background: #33276A;
-}
-
-.themeViolet {
-    --login-background: white;
-    --body-background: #BCDCCA;
-    --page-background: #d9b3ff;
-    --page-border: #333300;
-    --header-background: #4B004B;
-    --panel-background: #EEE6EE;
-    --text-light: white;
-    --text-middle: #666666;
-    --text-dark: black;
-    --text-error: red;
-    --text-date-main: #66CC00;
-    --text-date-santa: #CC33CC;
-    --text-date-warning: red;
-    --hide-skiplink: #C1FDC6;
-    --menu-background: #CFBDE6;
-    --menu-border: #4E667D;
-    --menu-text: white;
-    --menu-hover-background: #BFCBD6;
-    --menu-hover: #465c71;
-    --menu-active-background: #465c71;
-    --menu-active: #cfdbe6;
-    --link: #9999FF;
-    --hover: #00FF00;
-    --active: #66FFCC;
-    --bookgridForecolor: #333333;
-    --bookgridHeader: green;
-    --bookgridRow: gray;
-    --bookgridAlt: white;
-    --gridtotalrow: teal;
-    --selectedrowstyle: silver;
-}
-
-/* DEFAULTS
-----------------------------------------------------------*/
-body {
-    background: var(--body-background);
-    font-size: .80em;
-    font-family: Corbel;
-    margin: 0px;
-    padding: 0px;
-    color: var(--text-dark);
-}
-
-a:link, a:visited {
-    color: var(--link);
-}
-
-a:hover
-{
-    color: var(--hover);
-    text-decoration: none;
-}
-
-a:active 
-{
-    color: var(--active);
-}
-
-p
-{
-    margin-bottom: 10px;
-    line-height: 1.6em;
-}
-
-
-/* HEADINGS   
-----------------------------------------------------------*/
-
-h1, h2, h3, h4, h5, h6
-{
-    font-size: 1.5em;
-    color: var(--text-middle);
-    font-variant: small-caps;
-    text-transform: none;
-    font-weight: 200;
-    margin-bottom: 0px;
-}
-
-h1
-{
-    font-size: 1.6em;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-h2
-{
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-h3
-{
-    font-size: 1.2em;
-}
-
-h4
-{
-    font-size: 1.1em;
-}
-
-h5, h6
-{
-    font-size: 1em;
-}
-
-/* this rule styles <h1> and <h2> tags that are the 
-first child of the left and right table columns */
-.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2
-{
-    margin-top: 0px;
-}
-
-
-/* PRIMARY LAYOUT ELEMENTS   
+﻿/* PRIMARY LAYOUT ELEMENTS   
 ----------------------------------------------------------*/
 
 .page {
-    width: 960px;
+    width: 1000px;
     background-color: var(--page-background);
     margin: 20px auto 0px auto;
     border: 1px solid var(--page-border);
@@ -214,6 +14,15 @@ first child of the left and right table columns */
     padding: 0px;
     background: var(--header-background);
     width: 100%;
+}
+
+body {
+    background: var(--body-background);
+    font-size: .80em;
+    font-family: Corbel;
+    margin: 0px;
+    padding: 0px;
+    color: var(--text-dark);
 }
 
 .header h1
@@ -269,6 +78,67 @@ color: var(--text-error);
     color: var(--text-date-warning);
 }
 
+/* HEADINGS   
+----------------------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5em;
+    color: var(--text-middle);
+    font-variant: small-caps;
+    text-transform: none;
+    font-weight: 200;
+    margin-bottom: 0px;
+}
+
+h1 {
+    font-size: 1.6em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h4 {
+    font-size: 1.1em;
+}
+
+h5, h6 {
+    font-size: 1em;
+}
+
+/* this rule styles <h1> and <h2> tags that are the 
+first child of the left and right table columns */
+.rightColumn > h1, .rightColumn > h2, .leftColumn > h1, .leftColumn > h2 {
+    margin-top: 0px;
+}
+
+
+/* BASIC TEXT & LINKS
+----------------------------------------------------------*/
+a:link, a:visited {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--hover);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--active);
+}
+
+p {
+    margin-bottom: 10px;
+    line-height: 1.6em;
+}
 
 /* TAB MENU   
 ----------------------------------------------------------*/
@@ -297,7 +167,7 @@ div.menu ul li a, div.menu ul li a:visited {
     color: var(--menu-text);
     display: block;
     line-height: 1.35em;
-    padding: 4px 20px;
+    padding: 4px 18px;
     text-decoration: none;
     white-space: nowrap;
 }
@@ -347,16 +217,14 @@ legend
     padding: 2px 4px 8px 4px;
 }
 
-input.textEntry 
-{
+input.textEntry {
     width: 320px;
-    border: 1px solid #ccc;
+    border: 1px solid #666666;
 }
 
-input.passwordEntry 
-{
+input.passwordEntry {
     width: 320px;
-    border: 1px solid #ccc;
+    border: 1px solid #666666;
 }
 
 div.accountInfo
@@ -422,6 +290,34 @@ div.accountInfo
 
 .preserve-lines {
     white-space: pre-wrap;
+}
+
+/* stats */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.stats-card {
+    background-color: var(--statistics-panel-background);
+    border: 1px solid var(--statistics-panel-border);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stats-title {
+    font-size: 0.9rem;
+    color: var(--statistics-title-colour);
+    margin-bottom: 0.5rem;
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--statistics-value-colour);
 }
 
 /* Grid Styles  
@@ -632,4 +528,38 @@ div.accountInfo
 
 .markingGridSortedDescendingHeaderStyle {
     background-color: var(--markinggrid-sorteddescending-header-background);
+}
+
+/* Book Detail View Styles */
+
+.bookdetailView {
+    color: var(--bookdetail-forecolor);
+}
+
+.bookdetailViewFieldHeaderStyle {
+    background-color: var(--bookdetail-field-header-background);
+    font-weight: bold;
+    width: 20%;
+}
+
+/* Selection method and extension panels */
+
+.selection-method-panel {
+    border: 1px solid var(--selection-method-colour-border);
+    background-color: var(--selection-method-colour-panel-background);
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.selection-method-extension {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid var(--selection-method-extention-colour-border);
+}
+
+/* Validation (errors) */
+
+.validationSummaryStyle {
+    color: var(--validationSummary-forecolor);
+    font-weight: bold;
 }

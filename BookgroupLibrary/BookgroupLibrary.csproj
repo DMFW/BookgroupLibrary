@@ -71,6 +71,8 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\UnauthorisedPage.aspx" />
+    <Content Include="SecretSantas.aspx" />
+    <Content Include="Statistics.aspx" />
     <Content Include="Diary.aspx" />
     <Content Include="Images\Authors.gif" />
     <Content Include="Images\Books.gif" />
@@ -81,7 +83,13 @@
     <Content Include="Maintenance\MaintainAuthors.aspx" />
     <Content Include="News.aspx" />
     <Content Include="OurChoicesList.aspx" />
-    <Content Include="Styles\Site.css">
+    <Content Include="Styles\ThemePurple.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\ThemeClassic.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\SiteStyles.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Default.aspx" />
@@ -143,6 +151,20 @@
       <DependentUpon>UnauthorisedPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AppCode\BookAuthors.cs" />
+    <Compile Include="SecretSantas.aspx.cs">
+      <DependentUpon>SecretSantas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecretSantas.aspx.designer.cs">
+      <DependentUpon>SecretSantas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Statistics.aspx.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics.aspx.designer.cs">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Diary.aspx.cs">
       <DependentUpon>Diary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

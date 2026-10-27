@@ -80,11 +80,7 @@ namespace BookgroupLibrary
 
                 if ((e.Row.Cells[0].Text == "Total") | (e.Row.Cells[0].Text == "Mean"))
                 {
-
-                    // Would like to use themes and skins here eventually, but one step at a time...
-                    // e.Row.SkinID = "grdTotalRow";
-
-                    e.Row.BackColor = System.Drawing.Color.CadetBlue;
+                    e.Row.CssClass = "markingGridRowTotalStyle";
 
                 }
             }
