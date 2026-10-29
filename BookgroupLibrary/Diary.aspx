@@ -3,8 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<h1>Forthcoming Meetings</h1>
-    <p>The "normal" meeting for books we voted to read will be on the second Monday of the month. These dates are shown in this <span class="datemaintext">colour.</span>
-    <p>A special online meeting for Christmas Secret Santa selections will be on the fourth Monday of the month, marked in this <span class="datesantatext">colour.</span>
+    <p>The "normal" meeting for books we voted to read will be on the second Monday of the month. These dates are shown in this <span class="datemaintext">colour.</span></p>
+    <p>A special online meeting for Christmas Secret Santa selections will be on the fourth Monday of the month, marked in this <span class="datesantatext">colour.</span></p>
     <p>Meetings on any other date will be shown in this <span class="datewarningtext">colour</span> and will normally have an explanation in the comments.</p>
 	<asp:GridView ID="grdForthcomingMeetings" runat="server" DataSourceID="SqlDataSourceDiary" DataKeyNames="MeetingID" AutoGenerateColumns="False" Width="871px"
 	OnSelectedIndexChanged="grdForthcomingMeetings_SelectedIndexChanged" OnRowDataBound="grdForthcomingMeetings_DataBound">

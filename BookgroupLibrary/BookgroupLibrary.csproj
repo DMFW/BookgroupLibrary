@@ -83,10 +83,19 @@
     <Content Include="Maintenance\MaintainAuthors.aspx" />
     <Content Include="News.aspx" />
     <Content Include="OurChoicesList.aspx" />
-    <Content Include="Styles\ThemePurple.css">
+    <Content Include="Styles\ThemeCornflower.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Styles\ThemeClassic.css">
+    <Content Include="Styles\ThemeWood.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\ThemeMarigold.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\ThemeOrchid.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Styles\ThemeLaurel.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Styles\SiteStyles.css">

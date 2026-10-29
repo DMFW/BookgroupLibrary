@@ -64,11 +64,11 @@
 				<asp:TemplateField HeaderText="News" SortExpression="NewsText">
 					<EditItemTemplate>
 						<asp:TextBox ID="txtNewsText" runat="server" columns="100" 
-							Text='<%# Bind("NewsText") %>' TextMode="multiline"></asp:TextBox>
+							Text='<%# Bind("NewsText") %>' TextMode="MultiLine" Rows="10"></asp:TextBox>
 					</EditItemTemplate>
 					<InsertItemTemplate>
 						<asp:TextBox ID="txtNewsText" runat="server" columns="100" 
-							Text='<%# Bind("NewsText") %>' TextMode="multiline"></asp:TextBox>
+							Text='<%# Bind("NewsText") %>' TextMode="MultiLine" Rows="10"></asp:TextBox>
 					</InsertItemTemplate>
 				</asp:TemplateField>
 			</Fields>

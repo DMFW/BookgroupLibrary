@@ -67,5 +67,41 @@ namespace BookgroupLibrary
 		/// To modify move field declaration from designer file to code-behind file.
 		/// </remarks>
 		protected global::System.Web.UI.WebControls.Label lblNewestPublication;
+
+		/// <summary>
+		/// gvPopularAuthors control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.GridView gvPopularAuthors;
+
+		/// <summary>
+		/// gvPopularAuthorBooks control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.GridView gvPopularAuthorBooks;
+
+		/// <summary>
+		/// dsPopularAuthors control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.SqlDataSource dsPopularAuthors;
+
+		/// <summary>
+		/// dsPopularAuthorBooks control.
+		/// </summary>
+		/// <remarks>
+		/// Auto-generated field.
+		/// To modify move field declaration from designer file to code-behind file.
+		/// </remarks>
+		protected global::System.Web.UI.WebControls.SqlDataSource dsPopularAuthorBooks;
 	}
 }

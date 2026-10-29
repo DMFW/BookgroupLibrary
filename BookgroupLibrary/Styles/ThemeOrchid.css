@@ -1,0 +1,95 @@
+﻿body[data-theme="orchid"] {
+    --login-background: white;
+    --body-background: #9999ff;
+    --page-background: #d9b3ff;
+    --page-border: #333300;
+    --header-background: #4B004B;
+    --panel-background: #EEE6EE;
+    --text-light: white;
+    --text-middle: #666666;
+    --text-dark: black;
+    --text-error: red;
+    --text-date-main: #4B004B;
+    --text-date-santa: #CC33CC;
+    --text-date-warning: red;
+    --hide-skiplink: #993399;
+    --menu-background: #CFBDE6;
+    --menu-border: #4E667D;
+    --menu-text: black;
+    --menu-hover-background: #BFCBD6;
+    --menu-hover: #465c71;
+    --menu-active-background: #465c71;
+    --menu-active: #cfdbe6;
+    --link: #4B004B;
+    --hover: white;
+    --active: #66FFCC;
+    --validationSummary-forecolor: red;
+    /* Stats cards */
+    --statistics-panel-background: var(--panel-background);
+    --statistics-panel-border: black;
+    --statistics-title-colour: var(--text-dark);
+    --statistics-value-colour: black;
+    /* Default Grid Styles */
+    --defaultgrid-forecolor: #333333;
+    --defaultgrid-header-forecolor: White;
+    --defaultgrid-header-background: #4B004B;
+    --defaultgrid-footer-forecolor: White;
+    --defaultgrid-footer-background: #4B004B;
+    --defaultgrid-pager-forecolor: White;
+    --defaultgrid-pager-background: #d279a6;
+    --defaultgrid-row-default-background: #E3EAEB;
+    --defaultgrid-row-alt-background: white;
+    --defaultgrid-row-edit-background: #7C6F57;
+    --defaultgrid-row-selected-forecolor: #333333;
+    --defaultgrid-row-selected-background: #C5BBAF;
+    --defaultgrid-sortedascending-cell-background: #F8FAFA;
+    --defaultgrid-sortedascending-header-background: #246B61;
+    --defaultgrid-sorteddescending-cell-background: #D4DFE1;
+    --defaultgrid-sorteddescending-header-background: #15524A;
+    /* Book Grid Styles */
+    --bookgrid-forecolor: #333333;
+    --bookgrid-header-forecolor: White;
+    --bookgrid-header-background: #4b004b;
+    --bookgrid-footer-forecolor: White;
+    --bookgrid-footer-background: #4b004b;
+    --bookgrid-pager-forecolor: White;
+    --bookgrid-pager-background: #d279a6;
+    --bookgrid-row-default-background: #E3EAEB;
+    --bookgrid-row-alt-background: white;
+    --bookgrid-row-edit-background: #7C6F57;
+    --bookgrid-row-selected-forecolor: #333333;
+    --bookgrid-row-selected-background: #C5BBAF;
+    --bookgrid-sortedascending-cell-background: #F8FAFA;
+    --bookgrid-sortedascending-header-background: #800000;
+    --bookgrid-sorteddescending-cell-background: #D4DFE1;
+    --bookgrid-sorteddescending-header-background: #800000;
+    /* Marking Grid Styles */
+    --markinggrid-forecolor: #333333;
+    --markinggrid-bordercolor: White;
+    --markinggrid-header-forecolor: White;
+    --markinggrid-header-background: #4B004B;
+    --markinggrid-footer-forecolor: Black;
+    --markinggrid-footer-background: #C6C3C6;
+    --markinggrid-pager-forecolor: Black;
+    --markinggrid-pager-background: #C6C3C6;
+    --markinggrid-row-default-forecolor: Black;
+    --markinggrid-row-default-background: #DEDFDE;
+    --markinggrid-row-alt-forecolor: Black;
+    --markinggrid-row-alt-background: #DEDFDE;
+    --markinggrid-row-edit-background: #7C6F57;
+    --markinggrid-row-selected-forecolor: White;
+    --markinggrid-row-selected-background: #9471DE;
+    --markinggrid-row-total-forecolor: #d9b3ff;
+    --markinggrid-row-total-background: #993399;
+    --markinggrid-sortedascending-cell-background: #F8FAFA;
+    --markinggrid-sortedascending-header-background: #800000;
+    --markinggrid-sorteddescending-cell-background: #D4DFE1;
+    --markinggrid-sorteddescending-header-background: #800000;
+    /*  Book Detail Styles */
+    --bookdetail-forecolor: Black;
+    --bookdetail-field-header-background: #993399;
+    /* Selection method and extension panels */
+    --selection-method-colour-border: #800000;
+    --selection-method-colour-panel-background: var(--page-background);
+    --selection-method-extention-colour-border: black;
+}

@@ -4,51 +4,70 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head runat="server">
     <title></title>
-    <link href="~/Styles/ThemeClassic.css" rel="stylesheet" type="text/css" />
-    <link href="~/Styles/ThemePurple.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeCornflower.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeLaurel.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeMarigold.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeOrchid.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/ThemeWood.css" rel="stylesheet" type="text/css" />
     <link href="~/Styles/SiteStyles.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="HeadContent" runat="server">
     </asp:ContentPlaceHolder>
 </head>
-<body data-theme="purple">
+<body id="BodyTag" runat="server">
     <form runat="server">
         <div class="page">
             <div class="header">
-                <div class="title">
-                    <h1>Southend-On-Sea Big Readers Bookgroup
-                    </h1>
-                </div>
-                <div class="loginDisplay">
-                    <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                        <AnonymousTemplate>
-                            [ <a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a> ]
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            Welcome <span class="bold">
+                <div class="headerTop">
+                    <div class="title">
+                        <h1>Southend-On-Sea Big Readers Bookgroup</h1>
+                    </div>
+                    <div class="themeSelector">
+                       <asp:Label ID="lblTheme" runat="server" AssociatedControlID="ddlTheme" Text="Theme:" />
+                       <asp:DropDownList ID="ddlTheme"
+                         runat="server"
+                         AutoPostBack="true"
+                         OnSelectedIndexChanged="ddlTheme_SelectedIndexChanged">
+                           <asp:ListItem Text="Cornflower" Value="cornflower" />
+                           <asp:ListItem Text="Laurel" Value="laurel" />
+                           <asp:ListItem Text="Marigold" Value="marigold" />
+                           <asp:ListItem Text="Orchid" Value="orchid" />
+                           <asp:ListItem Text="Wood" Value="wood" />
+                       </asp:DropDownList>
+                   </div>
+                    <div class="loginDisplay">
+                        <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                            <AnonymousTemplate>
+                                [<a href="~/Account/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a> ]
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                Welcome <span class="bold">
                                 <asp:Label ID="lblHeadLoginName" runat="server" /></span>!
-                        [
-                            <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Default.aspx?Logout=True" />
-                            ]
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                                [
+                                <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/Default.aspx?Logout=True" />
+                                ]
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </div>
                 </div>
-                <div class="clear hideSkiplink">
-                    <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
-                        EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal"
-                        OnMenuItemClick="NavigationMenu_MenuItemClick">
-                        <Items>
-                            <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
-                            <asp:MenuItem NavigateUrl="~/Diary.aspx" Text="Diary" />
-                            <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/BBCTopList.aspx" Text="BBC Big Read" Value="BBC Big Read"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/OurChoicesList.aspx" Text="Our Choices" Value="Our Choices"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/SecretSantas.aspx" Text="Santa's Choices" Value="Santas"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/MarkingStats.aspx?SelectedPerson=0" Text="Marking Stats" Value="MarkingStats"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Statistics.aspx" Text="Library Stats" Value="Library Stats"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Links.aspx " Text="Links" Value="Links"></asp:MenuItem>
-                            <asp:MenuItem NavigateUrl="~/Maintenance.aspx" Text="Maintenance" Value="Maintenance"></asp:MenuItem>
-                        </Items>
-                    </asp:Menu>
+                <div class="headerMenu">
+                    <div class="hideSkiplink">
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu"
+                            EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal"
+                            OnMenuItemClick="NavigationMenu_MenuItemClick">
+                            <Items>
+                                <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home" />
+                                <asp:MenuItem NavigateUrl="~/Diary.aspx" Text="Diary" />
+                                <asp:MenuItem NavigateUrl="~/News.aspx" Text="News" Value="News"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/BBCTopList.aspx" Text="BBC Big Read" Value="BBC Big Read"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/OurChoicesList.aspx" Text="Our Choices" Value="Our Choices"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/SecretSantas.aspx" Text="Santa's Choices" Value="Santas"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/MarkingStats.aspx?SelectedPerson=0" Text="Marking Stats" Value="MarkingStats"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Statistics.aspx" Text="Library Stats" Value="Library Stats"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Links.aspx " Text="Links" Value="Links"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Maintenance.aspx" Text="Maintenance" Value="Maintenance"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </div>
                 </div>
             </div>
             <div class="main">

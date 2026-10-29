@@ -9,10 +9,40 @@
 }
 
 .header {
+    padding: 10px;
     position: relative;
     margin: 0px;
     padding: 0px;
     background: var(--header-background);
+    width: 100%;
+}
+
+.headerTop {
+    display: flex;
+    align-items: center;
+}
+
+.title 
+{
+    flex-grow: 1;
+}
+
+.themeSelector {
+    margin-right: 10px;
+    color: var(--text-light);
+}
+
+    .themeSelector label {
+        margin-right: 5px;
+    }
+
+    .themeSelector select {
+        background-color: var(--page-background);
+        color: var(--text-dark);
+    }
+
+.headerMenu {
+    margin-top: 10px;
     width: 100%;
 }
 
@@ -528,6 +558,16 @@ div.accountInfo
 
 .markingGridSortedDescendingHeaderStyle {
     background-color: var(--markinggrid-sorteddescending-header-background);
+}
+
+/* The stats deatil grid is a layout control for child grids and not a fully fledged detail display grid */
+
+.statsdetailGrid {
+    display: grid;
+    grid-template-columns: 300px 1fr;   
+    gap: 20px;
+    margin-top: 20px;
+    align-items: start;
 }
 
 /* Book Detail View Styles */
