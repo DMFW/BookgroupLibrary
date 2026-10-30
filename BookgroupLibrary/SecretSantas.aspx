@@ -44,6 +44,6 @@
                         from SecretSantaBook Left join GroupMember as GiftedByMember on GiftedBy = GiftedByMember.GroupMemberID
                         Left join GroupMember as GiftedToMember on GiftedTo = GiftedToMember.GroupMemberID
                         inner join Book on SecretSantaBook.BookID=Book.BookID
-                        order by ChristmasYear desc, DateRead asc">
+                        order by ChristmasYear desc, CASE WHEN Book.DateRead IS NULL THEN 0 ELSE 1 END, DateRead desc, Book.Title">
     </asp:SqlDataSource>
 </asp:Content>
