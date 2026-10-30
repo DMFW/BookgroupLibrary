@@ -88,7 +88,7 @@
 
 	<asp:SqlDataSource ID="SqlDataSourceNews" runat="server" 
 		ConnectionString="<%$ ConnectionStrings:SouthendBookgroupConnectionString %>" 
-		SelectCommand="SELECT * FROM [News] Order By DatePosted"
+		SelectCommand="SELECT * FROM [News] Order By DatePosted Desc"
 		UpdateCommand="UPDATE [News] Set [DatePosted] = @DatePosted, [NewsText]=@NewsText WHERE ([NewsID] = @NewsID)"
 		DeleteCommand="DELETE [News] WHERE [NewsID] = @NewsID"
 		OnDeleting="SqlDataSourceNews_Deleting">
