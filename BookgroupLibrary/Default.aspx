@@ -65,11 +65,6 @@
     <p> 
         If you are reading this and thinking you might like to join a group, you can find information about public groups here:-
         <a href="http://www.bookgroup.info/041205/index.php" name="PublicBookGroups">Public Book Groups</a></p>
-    <p>
-        The purpose of this web site is to record the group history and our own scoring 
-        for the interest of members. A major new release of the site database and software was
-        launched in 2012 allowing all group members to now add and edit the books and to update
-		their own scores (previously this had to be done by the site administrator).</p>
 
     <p>David Worton - 14th June    : 2012</p>
     <p>Edited         30th October : 2026 to bring things up to date</p>
