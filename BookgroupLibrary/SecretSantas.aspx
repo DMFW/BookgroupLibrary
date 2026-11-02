@@ -6,18 +6,16 @@
         AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
         DataSourceID="SqlDataSourceSantasList" 
         EmptyDataText="There are no data records to display." 
-        GridLines="None" onselectedindexchanged="grdSantasList_SelectedIndexChanged" 
+        GridLines="None" onselectedindexchanged="grdSantasList_SelectedIndexChanged"
+        OnSorting="grdSantasList_Sorting" OnRowDataBound="grdSantasList_RowDataBound"   
         PageSize="50" DataKeyNames="BookID" CssClass="bookGrid">
         <HeaderStyle CssClass="bookGridHeaderStyle" />
         <FooterStyle CssClass="bookGridFooterStyle" />
         <PagerStyle HorizontalAlign="Center" CssClass="bookGridPagerStyle" />
         <RowStyle CssClass="bookGridRowStyle" />
-        <AlternatingRowStyle CssClass="bookGridRowAltStyle"/>
         <EditRowStyle CssClass="bookGridRowEditStyle" />
         <SelectedRowStyle CssClass="bookGridRowSelectedStyle" />
-        <SortedAscendingCellStyle CssClass="bookGridSortedAscendingCellStyle" />
         <SortedAscendingHeaderStyle CssClass="bookGridSortedAscendingHeaderStyle" />
-        <SortedDescendingCellStyle CssClass="bookGridSortedDescendingCellStyle" />
         <SortedDescendingHeaderStyle CssClass="bookGridSortedDescendingHeaderStyle" />
         <Columns>
             <asp:CommandField ShowSelectButton="True" ButtonType="Button" />

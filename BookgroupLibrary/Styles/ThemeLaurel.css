@@ -63,6 +63,9 @@
     --bookgrid-sortedascending-header-background: #246B61;
     --bookgrid-sorteddescending-cell-background: #D4DFE1;
     --bookgrid-sorteddescending-header-background: #15524A;
+    --bookgrid-group-A-background: #ccffcc;
+    --bookgrid-group-B-background: #ccff99;
+    --bookgrid-group-divider: black;
     /* Marking Grid Styles */
     --markinggrid-forecolor: #333333;
     --markinggrid-bordercolor: White;

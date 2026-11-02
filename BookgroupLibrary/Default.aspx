@@ -33,7 +33,7 @@
         and we discuss the books that were gifted over the course of the next year.
     </p>
         
-        These are the categories we use to score books we have read:-</p>
+    <p>These are the categories we use to score books we have read:-</p>
     <asp:GridView 
         ID="grdCategories" runat="server" DataSourceID="SqlDataSourceMarkingCategory" 
         AutoGenerateColumns="False" CellPadding="4" 

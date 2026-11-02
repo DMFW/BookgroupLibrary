@@ -468,6 +468,18 @@ div.accountInfo
     font-weight: bold;
 }
 
+.bookGridGroupA {
+    background-color: var(--bookgrid-group-A-background);
+}
+
+.bookGridGroupB {
+    background-color: var(--bookgrid-group-B-background);
+}
+
+.bookGridGroupStart {
+    border-top: 2px solid var(--bookgrid-group-divider);
+}
+
 .bookGridSortedAscendingCellStyle {
     background-color: var(--bookgrid-sortedascending-cell-background);
 }
