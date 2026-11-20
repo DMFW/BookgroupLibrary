@@ -372,7 +372,7 @@ namespace BookgroupLibraryCode
             }
 
             // Note : - The final line below is not saving the result in the view state because
-            // that is not available in this class. It is meterly posting it in an exposed 
+            // that is not available in this class. It is merely posting it in an exposed 
             // variable which the page may choose to post into the view state if it wants to. 
             // Editing will do this but viewing does not need to.
 

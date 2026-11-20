@@ -13,13 +13,5 @@ namespace BookgroupLibrary
         {
 
         }
-
-        protected void grdBBCList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            int rowIndex = grdBBCList.SelectedIndex;
-            string selectedBookID = grdBBCList.DataKeys[rowIndex].Value.ToString();
-            Server.Transfer("~/BookDetail.aspx?SelectedBookID=" + selectedBookID, true);
-        }
     }
 }

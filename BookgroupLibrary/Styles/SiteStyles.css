@@ -2,10 +2,12 @@
 ----------------------------------------------------------*/
 
 .page {
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     background-color: var(--page-background);
     margin: 20px auto 0px auto;
     border: 1px solid var(--page-border);
+    box-sizing: border-box;
 }
 
 .header {
@@ -22,9 +24,10 @@
     align-items: center;
 }
 
-.title 
-{
+.title {
     flex-grow: 1;
+    text-align: left;
+    width: auto;
 }
 
 .themeSelector {
@@ -44,6 +47,31 @@
 .headerMenu {
     margin-top: 10px;
     width: 100%;
+}   
+
+@media (max-width: 740px) 
+{
+    .headerTop {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        flex-basis: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .themeSelector {
+        flex: 1;
+        text-align: left;
+    }
+
+    .loginDisplay {
+        flex: 1;
+        text-align: right;
+        white-space: nowrap;
+    }
 }
 
 body {
@@ -215,6 +243,39 @@ div.menu ul li a:active {
     text-decoration: none;
 }
 
+@media (max-width: 450px) {
+
+    .headerMenu {
+        margin-top: 0;
+    }
+
+    div.menu {
+        float: none !important;
+        width: 220px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0;
+    }
+
+        div.menu ul {
+            float: none !important;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+            div.menu ul li {
+                float: none !important;
+                width: 100%;
+            }
+
+                div.menu ul li a,
+                div.menu ul li a:visited {
+                    text-align: center;
+                }
+}
+
+
 /* FORM ELEMENTS   
 ----------------------------------------------------------*/
 
@@ -353,6 +414,10 @@ div.accountInfo
 /* Grid Styles  
 ----------------------------------------------------------*/
 
+.grid-container {
+    overflow-x: auto;
+}
+
 /* Default Grid Styles */
 
 .defaultgrid {
@@ -417,6 +482,61 @@ div.accountInfo
 
 .defaultgridSortedDescendingHeaderStyle {
     background-color: var(--defaultgrid-sorteddescending-header-background);
+}
+
+/* Diary grid context aware changes*/
+
+/* Phone */
+
+@media (max-width: 450px) {
+    .col-mtgcomments,
+    .col-mtgauthor,
+    .col-mtgchooser {
+        display: none;
+    }
+}
+
+/* News grid context aware changes*/
+
+/* Phone */
+
+@media (max-width: 450px) {
+    .newsGrid,
+    .newsGrid tbody,
+    .newsGrid tr,
+    .newsGrid td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+        .newsGrid th {
+            display: none;
+        }
+
+        .newsGrid tr {
+            display: block;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid var(--page-border);
+            background-color: var(--page-background);
+        }
+
+    .newsDate {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    .newsText {
+        display: block;
+        white-space: pre-wrap;
+    }
+
+    .newsAdmin {
+        display: block;
+        margin-bottom: 8px;
+    }
 }
 
 /* Book Grid Styles */
@@ -572,7 +692,7 @@ div.accountInfo
     background-color: var(--markinggrid-sorteddescending-header-background);
 }
 
-/* The stats deatil grid is a layout control for child grids and not a fully fledged detail display grid */
+/* The stats detail grid is a layout control for child grids and not a fully fledged detail display grid */
 
 .statsdetailGrid {
     display: grid;
@@ -580,6 +700,12 @@ div.accountInfo
     gap: 20px;
     margin-top: 20px;
     align-items: start;
+}
+
+@media (max-width: 700px) {
+    .statsdetailGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Book Detail View Styles */

@@ -160,6 +160,7 @@
       <DependentUpon>UnauthorisedPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="AppCode\BookAuthors.cs" />
+    <Compile Include="AppCode\GridColumnProperties.cs" />
     <Compile Include="SecretSantas.aspx.cs">
       <DependentUpon>SecretSantas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

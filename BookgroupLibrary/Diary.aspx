@@ -3,10 +3,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<h1>Forthcoming Meetings</h1>
-    <p>The "normal" meeting for books we voted to read will be on the second Monday of the month. These dates are shown in this <span class="datemaintext">colour.</span></p>
-    <p>A special online meeting for Christmas Secret Santa selections will be on the fourth Monday of the month, marked in this <span class="datesantatext">colour.</span></p>
-    <p>Meetings on any other date will be shown in this <span class="datewarningtext">colour</span> and will normally have an explanation in the comments.</p>
-	<asp:GridView ID="grdForthcomingMeetings" runat="server" DataSourceID="SqlDataSourceDiary" DataKeyNames="MeetingID" AutoGenerateColumns="False" Width="871px"
+	<div class="grid-container">
+	<asp:GridView ID="grdForthcomingMeetings" runat="server" DataSourceID="SqlDataSourceDiary" DataKeyNames="MeetingID" AutoGenerateColumns="False" Width="100%"
 	OnSelectedIndexChanged="grdForthcomingMeetings_SelectedIndexChanged" OnRowDataBound="grdForthcomingMeetings_DataBound">
 		<Columns>
 		<asp:TemplateField ShowHeader="False" Visible="False">
@@ -15,17 +13,17 @@
 				<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>                                                    
       </ItemTemplate>
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="Date">
+			<asp:TemplateField HeaderText="Date" ItemStyle-CssClass="col-mtgdate" HeaderStyle-CssClass="col-mtgdate">
 				<ItemTemplate>
 					<asp:Label ID="lblMeetingDate" runat="server" 
 						Text='<%# Bind("MeetingDate", "{0:d}") %>'></asp:Label>
 				</ItemTemplate>
 			</asp:TemplateField>
-			<asp:BoundField DataField="Leader" HeaderText="Leader" ReadOnly="True" />
-			<asp:BoundField DataField="Title" HeaderText="Book" ReadOnly="True" />
-			<asp:BoundField DataField="Author" HeaderText="Author(s)" ReadOnly="True"/>
-			<asp:BoundField DataField="Chooser" HeaderText="Chooser" ReadOnly="True" />
-			<asp:BoundField DataField="Comments" HeaderText="Comments" ReadOnly="True" />
+			<asp:BoundField DataField="Leader" HeaderText="Leader" ReadOnly="True" ItemStyle-CssClass="col-mtgleader" HeaderStyle-CssClass="col-mtgleader" />
+			<asp:BoundField DataField="Title" HeaderText="Book" ReadOnly="True" ItemStyle-CssClass="col-mtgbook" HeaderStyle-CssClass="col-mtgbook" />
+			<asp:BoundField DataField="Author" HeaderText="Author(s)" ReadOnly="True" ItemStyle-CssClass="col-mtgauthor" HeaderStyle-CssClass="col-mtgauthor"/>
+			<asp:BoundField DataField="Chooser" HeaderText="Chooser" ReadOnly="True" ItemStyle-CssClass="col-mtgchooser" HeaderStyle-CssClass="col-mtgchooser" />
+			<asp:BoundField DataField="Comments" HeaderText="Comments" ReadOnly="True" ItemStyle-CssClass="col-mtgcomments" HeaderStyle-CssClass="col-mtgcomments" />
 			<asp:TemplateField ShowHeader="True" HeaderText="LeaderID" Visible="False">
 					<ItemTemplate>
             <asp:Label ID="lblLeaderID" runat="server" Text='<%# Eval("LeaderID") %>'></asp:Label>
@@ -39,6 +37,7 @@
 		</Columns>
 		<SelectedRowStyle CssClass="SelectedRowStyle" />
 	</asp:GridView>
+	</div>
 	<asp:Button ID="btnAddMeeting" runat="server" Text="Add Meeting" 
 		Visible="false" onclick="btnAddMeeting_Click"/>
 	<asp:Panel ID="pnlEditingArea" runat="server" Visible="false">
@@ -155,6 +154,11 @@
 			</tr>
 		</table>
 	</asp:Panel>
+
+	<p>The "normal" meeting for books we voted to read will be on the second Monday of the month. These dates are shown in this <span class="datemaintext">colour.</span></p>
+    <p>A special online meeting for Christmas Secret Santa selections will be on the fourth Monday of the month, marked in this <span class="datesantatext">colour.</span></p>
+    <p>Meetings on any other date will be shown in this <span class="datewarningtext">colour</span> and will normally have an explanation in the comments.
+	Comments are not shown on the web site's mobile layout to save space, so if you are using a phone you'll need to view this page on a larger screen to see them.</p>
 
 	<asp:SqlDataSource ID="SqlDataSourceDiary" runat="server" 
 		ConnectionString="<%$ ConnectionStrings:SouthendBookgroupConnectionString %>" 

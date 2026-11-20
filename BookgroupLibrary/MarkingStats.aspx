@@ -10,7 +10,7 @@
         onrowdatabound="grdStatsBookMarkView_RowDataBound"
         ondatabound="grdStatsBookMarkView_DataBound"
         onsorting="grdStatsBookMarkView_Sorting" 
-        onselectedindexchanged="grdStatsBookMarkView_SelectedIndexChanged" CssClass="markingGrid">
+        CssClass="markingGrid">
         <HeaderStyle CssClass="markingGridHeaderStyle" />
         <FooterStyle CssClass="markingGridFooterStyle" />
         <PagerStyle HorizontalAlign="Right" CssClass="markingGridPagerStyle" />

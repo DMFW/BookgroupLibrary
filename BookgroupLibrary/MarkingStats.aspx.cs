@@ -36,6 +36,10 @@ namespace BookgroupLibrary
 		protected void grdStatsBookMarkView_RowDataBound(Object grid, GridViewRowEventArgs e)
 		{
 
+			int bookID_Column = _myMarks.ColumnProperties["BookID"].ColumnIndex;
+			int title_Column = _myMarks.ColumnProperties["BookTitle"].ColumnIndex;
+
+			string columnName;
 			// apply custom formatting to the header cells
 			if (e.Row.RowType == DataControlRowType.Header)
 			{
@@ -44,10 +48,21 @@ namespace BookgroupLibrary
 				int i = 0;
 				foreach (TableCell cell in e.Row.Cells)
 				{
-					cell.Wrap = true;
-					if (i >= (e.Row.Cells.Count / 2))
+					columnName = _myMarks.BooksMarksTable.Columns[i].ColumnName;
+
+					// set formatting for the book title column
+					if (columnName == "BookTitle")
+					{
+						cell.Width = new Unit("1000px");
+					}
+
+					if (_myMarks.ColumnProperties[columnName].Hidden)
 					{
 						cell.Visible = false;
+					}
+					else
+					{
+						cell.Wrap = true;
 					}
 					i++;
 				}
@@ -56,29 +71,43 @@ namespace BookgroupLibrary
 			if (e.Row.RowType == DataControlRowType.DataRow)
 			{
 
-				// set formatting for the member name column
-				TableCell cell = e.Row.Cells[0];
-				cell.Width = new Unit("1000px");
+				string bookID = e.Row.Cells[bookID_Column].Text;
+				string title = e.Row.Cells[title_Column].Text;
+
+				if (title != "Total" && title != "Mean")
+				{
+					HyperLink link = new HyperLink();
+
+					link.Text = title;
+					link.NavigateUrl =
+							"~/BookDetail.aspx?SelectedBookID=" + bookID;
+
+					e.Row.Cells[title_Column].Controls.Clear();
+					e.Row.Cells[title_Column].Controls.Add(link);
+				}
 
 				// set formatting for value cells
-				for (int i = 1; i < e.Row.Cells.Count; i++)
+				for (int i = 0; i < e.Row.Cells.Count; i++)
 				{
-					cell = e.Row.Cells[i];
+					columnName = _myMarks.BooksMarksTable.Columns[i].ColumnName;
+					TableCell cell = e.Row.Cells[i];
 
-					if (i >= (e.Row.Cells.Count / 2))
+					if (_myMarks.ColumnProperties[columnName].Hidden)
 					{
 						cell.Visible = false;
 					}
 					else
 					{
-						// right-align each of the column cells after the first
-						// and set the width
+						cell.Wrap = true;
+					}
+					if (_myMarks.ColumnProperties[columnName].RightAlign)
+					{
 						cell.HorizontalAlign = HorizontalAlign.Right;
 						cell.Width = new Unit("200px");
 					}
 				}
 
-				if ((e.Row.Cells[0].Text == "Total") || (e.Row.Cells[0].Text == "Mean"))
+				if ((e.Row.Cells[title_Column].Text == "Total") || (e.Row.Cells[title_Column].Text == "Mean"))
 				{
 					e.Row.CssClass = "markingGridRowTotalStyle";
 				}
@@ -94,6 +123,9 @@ namespace BookgroupLibrary
 
 			e.SortExpression = "Sort" + e.SortExpression;
 			e.SortDirection = GetSortDirection(e.SortExpression);
+
+			System.Diagnostics.Debug.WriteLine(
+			 "Sort Expression = " + e.SortExpression);
 
 			if (e.SortDirection == SortDirection.Ascending)
 			{
@@ -152,12 +184,6 @@ namespace BookgroupLibrary
 				}
 			}
 		}
-
-		protected void grdStatsBookMarkView_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-		}
-
 
 		private void LoadMemberList()
 		{

@@ -6,7 +6,7 @@
         AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
         DataSourceID="SqlDataSourceOurList" 
         EmptyDataText="There are no data records to display." 
-        GridLines="None" onselectedindexchanged="grdOurList_SelectedIndexChanged" 
+        GridLines="None"
         PageSize="50" DataKeyNames="BookID" CssClass="bookGrid">
         <HeaderStyle CssClass="bookGridHeaderStyle" />
         <FooterStyle CssClass="bookGridFooterStyle" />
@@ -20,8 +20,16 @@
         <SortedDescendingCellStyle CssClass="bookGridSortedDescendingCellStyle" />
         <SortedDescendingHeaderStyle CssClass="bookGridSortedDescendingHeaderStyle" />
         <Columns>
-            <asp:CommandField ShowSelectButton="True" ButtonType="Button" />
-            <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+            <asp:TemplateField HeaderText="Title" SortExpression="Title">
+                <ItemTemplate>
+                    <asp:HyperLink
+                        ID="lnkBook"
+                        runat="server"
+                        Text='<%# Eval("Title") %>'
+                        NavigateUrl='<%# Eval("BookID",
+                            "~/BookDetail.aspx?SelectedBookID={0}") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="Author" HeaderText="Author" 
                 SortExpression="Author" ReadOnly="True" />
             <asp:BoundField DataField="YearPublished" HeaderText="Published" 

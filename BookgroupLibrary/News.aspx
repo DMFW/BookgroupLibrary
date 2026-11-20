@@ -3,22 +3,22 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<h1>Bookgroup News</h1>
-	<asp:GridView ID="grdNews" runat="server" DataSourceID="SqlDataSourceNews" DataKeyNames="NewsID" AutoGenerateColumns="False" Width="871px"
+	<asp:GridView ID="grdNews" runat="server" CssClass="news-grid" DataSourceID="SqlDataSourceNews" DataKeyNames="NewsID" AutoGenerateColumns="False" Width="100%"
 	OnSelectedIndexChanged="grdNews_SelectedIndexChanged" OnRowDataBound="grdNews_DataBound">
 		<Columns>
-			<asp:TemplateField ShowHeader="False" Visible="False">
+			<asp:TemplateField ShowHeader="False" Visible="False" HeaderStyle-CssClass="newsAdmin" ItemStyle-CssClass="newsAdmin">
 				<ItemTemplate>
 					<asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="False" CommandName="Select" Text="Edit"></asp:LinkButton>
 					<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
 				</ItemTemplate>
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="Date Posted">
+			<asp:TemplateField HeaderText="Date Posted" HeaderStyle-CssClass="newsDate" ItemStyle-CssClass="newsDate">
 				<ItemTemplate>
 				<asp:Label ID="lblDatePosted" runat="server" 
 					Text='<%# Bind("DatePosted", "{0:d}") %>'></asp:Label>
 				</ItemTemplate>
 			</asp:TemplateField>
-			<asp:TemplateField HeaderText="News">
+			<asp:TemplateField HeaderText="News" HeaderStyle-CssClass="newsText" ItemStyle-CssClass="newsText">
                 <ItemTemplate>
                     <asp:Label ID="lblDescription"
                         runat="server"

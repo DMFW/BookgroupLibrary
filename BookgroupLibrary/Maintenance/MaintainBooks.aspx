@@ -222,8 +222,20 @@
                         <asp:Label ID="lbl1" runat="server" Text='<%# Eval("Plot") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt1" runat="server" Text='<%# Bind("Plot") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvPlot" ControlToValidate="txt1" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Plot score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                            <asp:DropDownList ID="ddlPlot" runat="server" SelectedValue='<%# Bind("Plot") %>'>
+                                <asp:ListItem Text="" Value="" />
+                                <asp:ListItem Text="0" Value="0" />
+                                <asp:ListItem Text="1" Value="1" />
+                                <asp:ListItem Text="2" Value="2" />
+                                <asp:ListItem Text="3" Value="3" />
+                                <asp:ListItem Text="4" Value="4" />
+                                <asp:ListItem Text="5" Value="5" />
+                                <asp:ListItem Text="6" Value="6" />
+                                <asp:ListItem Text="7" Value="7" />
+                                <asp:ListItem Text="8" Value="8" />
+                                <asp:ListItem Text="9" Value="9" />
+                                <asp:ListItem Text="10" Value="10" />
+                            </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Characters">
@@ -231,8 +243,20 @@
                         <asp:Label ID="lbl2" runat="server" Text='<%# Eval("Characters") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt2" runat="server" Text='<%# Bind("Characters") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvCharacter" ControlToValidate="txt2" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Characterisation score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                        <asp:DropDownList ID="ddlCharacters" runat="server" SelectedValue='<%# Bind("Characters") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Scenery">
@@ -240,8 +264,20 @@
                         <asp:Label ID="lbl3" runat="server" Text='<%# Eval("Scenery") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt3" runat="server" Text='<%# Bind("Scenery") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvScenery" ControlToValidate="txt3" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Scenery score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                        <asp:DropDownList ID="ddlScenery" runat="server" SelectedValue='<%# Bind("Scenery") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Writing">
@@ -249,8 +285,20 @@
                         <asp:Label ID="lbl4" runat="server" Text='<%# Eval("Writing") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt4" runat="server" Text='<%# Bind("Writing") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvWriting" ControlToValidate="txt4" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Writing Style & Structure score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                         <asp:DropDownList ID="ddlWriting" runat="server" SelectedValue='<%# Bind("Writing") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Philosophy">
@@ -258,8 +306,20 @@
                         <asp:Label ID="lbl5" runat="server" Text='<%# Eval("Philosophy") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt5" runat="server" Text='<%# Bind("Philosophy") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvPhilisophy" ControlToValidate="txt5" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Philosophy score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                         <asp:DropDownList ID="ddlPhilosophy" runat="server" SelectedValue='<%# Bind("Philosophy") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Unputdown">
@@ -267,8 +327,20 @@
                         <asp:Label ID="lbl6" runat="server" Text='<%# Eval("Unputdown") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt6" runat="server" Text='<%# Bind("Unputdown") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvUnputdown" ControlToValidate="txt6" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Unputdownability score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                         <asp:DropDownList ID="ddlUnputdown" runat="server" SelectedValue='<%# Bind("Unputdown") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="Overall">
@@ -276,8 +348,20 @@
                         <asp:Label ID="lbl7" runat="server" Text='<%# Eval("Overall") %>'></asp:Label>
                     </ItemTemplate>
                     <EditItemTemplate>
-                        <asp:TextBox ID="txt7" runat="server" Text='<%# Bind("Overall") %>' Width="40px" Style="text-align: right;"></asp:TextBox>
-                        <asp:CustomValidator ID="ctvOverall" ControlToValidate="txt7" runat="server" OnServerValidate="ConfirmFormattingAsDouble" ErrorMessage="The Overall score must either be numeric or all values deleted (do not type spaces) if it should not be set." Display="None" ValidationGroup="UpdateScoreGridRow" ValidateEmptyText="True"></asp:CustomValidator>
+                         <asp:DropDownList ID="ddlOverall" runat="server" SelectedValue='<%# Bind("Overall") %>'>
+                            <asp:ListItem Text="" Value="" />
+                            <asp:ListItem Text="0" Value="0" />
+                            <asp:ListItem Text="1" Value="1" />
+                            <asp:ListItem Text="2" Value="2" />
+                            <asp:ListItem Text="3" Value="3" />
+                            <asp:ListItem Text="4" Value="4" />
+                            <asp:ListItem Text="5" Value="5" />
+                            <asp:ListItem Text="6" Value="6" />
+                            <asp:ListItem Text="7" Value="7" />
+                            <asp:ListItem Text="8" Value="8" />
+                            <asp:ListItem Text="9" Value="9" />
+                            <asp:ListItem Text="10" Value="10" />
+                        </asp:DropDownList>
                     </EditItemTemplate>
                 </asp:TemplateField>
                 <asp:TemplateField ShowHeader="True" HeaderText="ID" Visible="False">

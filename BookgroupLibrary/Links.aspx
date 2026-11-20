@@ -3,29 +3,31 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 	<h1>Bookgroup External Site Links</h1>
-	<asp:GridView ID="grdLinks" runat="server" DataSourceID="SqlDataSourceLinks" DataKeyNames="LinkID" AutoGenerateColumns="False" Width="871px"
-	OnSelectedIndexChanged="grdLinks_SelectedIndexChanged" OnRowDataBound="grdLinks_DataBound">
-		<Columns>
-			<asp:TemplateField ShowHeader="False" Visible="False">
-				<ItemTemplate>
-					<asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="False" CommandName="Select" Text="Edit"></asp:LinkButton>
-					<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
-				</ItemTemplate>
-			</asp:TemplateField>
-			<asp:TemplateField HeaderText="External Link">
-				<ItemTemplate>
-				<asp:HyperLink ID="hlLink"
-							runat="server"
-							Text='<%# Eval("LinkText") %>'
-							NavigateUrl='<%# Eval("LinkURL") %>' 
-							Target="_blank"
-							rel="noopener noreferrer" />
-				</ItemTemplate>
-			</asp:TemplateField>
-			<asp:BoundField DataField="LinkDescription" HeaderText="Site Description" ReadOnly="True" />
-		</Columns>
-		<SelectedRowStyle CssClass="SelectedRowStyle" />
-	</asp:GridView>
+	<div class="grid-container">
+		<asp:GridView ID="grdLinks" runat="server" DataSourceID="SqlDataSourceLinks" DataKeyNames="LinkID" AutoGenerateColumns="False" Width="100%"
+		OnSelectedIndexChanged="grdLinks_SelectedIndexChanged" OnRowDataBound="grdLinks_DataBound">
+			<Columns>
+				<asp:TemplateField ShowHeader="False" Visible="False">
+					<ItemTemplate>
+						<asp:LinkButton ID="lnkButtonEdit" runat="server" CausesValidation="False" CommandName="Select" Text="Edit"></asp:LinkButton>
+						<asp:LinkButton ID="lnkButtonDelete" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete"></asp:LinkButton>
+					</ItemTemplate>
+				</asp:TemplateField>
+				<asp:TemplateField HeaderText="External Link">
+					<ItemTemplate>
+					<asp:HyperLink ID="hlLink"
+								runat="server"
+								Text='<%# Eval("LinkText") %>'
+								NavigateUrl='<%# Eval("LinkURL") %>' 
+								Target="_blank"
+								rel="noopener noreferrer" />
+					</ItemTemplate>
+				</asp:TemplateField>
+				<asp:BoundField DataField="LinkDescription" HeaderText="Site Description" ReadOnly="True" />
+			</Columns>
+			<SelectedRowStyle CssClass="SelectedRowStyle" />
+		</asp:GridView>
+	</div>
 	<asp:Button ID="btnAddLink" runat="server" Text="Add Link" 
 		Visible="false" onclick="btnAddLink_Click"/>
 	<asp:Panel ID="pnlEditingArea" runat="server" Visible="false">

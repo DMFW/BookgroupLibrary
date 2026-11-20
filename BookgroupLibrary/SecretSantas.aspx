@@ -6,7 +6,7 @@
         AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" 
         DataSourceID="SqlDataSourceSantasList" 
         EmptyDataText="There are no data records to display." 
-        GridLines="None" onselectedindexchanged="grdSantasList_SelectedIndexChanged"
+        GridLines="None"
         OnSorting="grdSantasList_Sorting" OnRowDataBound="grdSantasList_RowDataBound"   
         PageSize="50" DataKeyNames="BookID" CssClass="bookGrid">
         <HeaderStyle CssClass="bookGridHeaderStyle" />
@@ -18,11 +18,20 @@
         <SortedAscendingHeaderStyle CssClass="bookGridSortedAscendingHeaderStyle" />
         <SortedDescendingHeaderStyle CssClass="bookGridSortedDescendingHeaderStyle" />
         <Columns>
-            <asp:CommandField ShowSelectButton="True" ButtonType="Button" />
             <asp:BoundField DataField="ChristmasYear" HeaderText="Christmas" SortExpression="ChristmasYear" />
             <asp:BoundField DataField="GiftedByName" HeaderText="Gifted By" SortExpression="GiftedBySortName" />
             <asp:BoundField DataField="GiftedToName" HeaderText="Gifted To" SortExpression="GiftedToSortName" />
             <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
+            <asp:TemplateField HeaderText="Title" SortExpression="Title">
+                <ItemTemplate>
+                    <asp:HyperLink
+                        ID="lnkBook"
+                        runat="server"
+                        Text='<%# Eval("Title") %>'
+                        NavigateUrl='<%# Eval("BookID",
+                            "~/BookDetail.aspx?SelectedBookID={0}") %>' />
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:BoundField DataField="DateRead" HeaderText="Date Read" 
                 SortExpression="DateRead" DataFormatString="{0:D}" NullDisplayText="Not Read Yet" ReadOnly="True" />
         </Columns>

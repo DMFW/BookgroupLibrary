@@ -37,14 +37,6 @@ namespace BookgroupLibrary
 			ViewState["CurrentSortField"] = e.SortExpression;
 		}
 
-		protected void grdSantasList_SelectedIndexChanged(object sender, EventArgs e)
-		{
-
-			int rowIndex = grdSantasList.SelectedIndex;
-			string selectedBookID = grdSantasList.DataKeys[rowIndex].Value.ToString();
-			Server.Transfer("~/BookDetail.aspx?SelectedBookID=" + selectedBookID, true);
-		}
-
 		protected void grdSantasList_RowDataBound(object sender, GridViewRowEventArgs e)
 		{
 			if (e.Row.RowType != DataControlRowType.DataRow)
